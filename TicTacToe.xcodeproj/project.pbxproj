@@ -14,6 +14,7 @@
 		473BFB5F1B097334005C686B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473BFB5E1B097334005C686B /* Images.xcassets */; };
 		473BFB621B097334005C686B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473BFB601B097334005C686B /* LaunchScreen.xib */; };
 		473BFB6E1B097335005C686B /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 473BFB6D1B097335005C686B /* TicTacToeTests.m */; };
+		473BFB791B09AB88005C686B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 473BFB781B09AB88005C686B /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		473BFB671B097335005C686B /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BFB6C1B097335005C686B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473BFB6D1B097335005C686B /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		473BFB771B09AB88005C686B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		473BFB781B09AB88005C686B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				473BFB561B097334005C686B /* AppDelegate.m */,
 				473BFB581B097334005C686B /* ViewController.h */,
 				473BFB591B097334005C686B /* ViewController.m */,
+				473BFB771B09AB88005C686B /* WebViewController.h */,
+				473BFB781B09AB88005C686B /* WebViewController.m */,
 				473BFB5B1B097334005C686B /* Main.storyboard */,
 				473BFB5E1B097334005C686B /* Images.xcassets */,
 				473BFB601B097334005C686B /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				473BFB5A1B097334005C686B /* ViewController.m in Sources */,
 				473BFB571B097334005C686B /* AppDelegate.m in Sources */,
 				473BFB541B097334005C686B /* main.m in Sources */,
+				473BFB791B09AB88005C686B /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
