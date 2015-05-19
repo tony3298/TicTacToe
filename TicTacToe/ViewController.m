@@ -153,20 +153,27 @@
         }
     }
 
+    NSLog(@"%@", boardString);
+
     NSError *error = NULL;
     NSString *currentPlayer = self.whichPlayerLabel.text;
-    NSString *regexString1 = [NSString stringWithFormat:@"%@%@%@......", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString2 = [NSString stringWithFormat:@"...%@%@%@...", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString3 = [NSString stringWithFormat:@"......%@%@%@", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString4 = [NSString stringWithFormat:@"%@..%@..%@..", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString5 = [NSString stringWithFormat:@".%@..%@..%@.", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString6 = [NSString stringWithFormat:@"..%@..%@..%@", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString7 = [NSString stringWithFormat:@"%@...%@...%@", currentPlayer, currentPlayer, currentPlayer];
-    NSString *regexString8 = [NSString stringWithFormat:@"..%@.%@.%@..", currentPlayer, currentPlayer, currentPlayer];
 
-    NSArray *regexStrings = [NSArray arrayWithObjects:regexString1, regexString2, regexString3, regexString4, regexString5, regexString6, regexString7, regexString8, nil];
+    NSString *regexString = @"QQQ......|...QQQ...|......QQQ|Q..Q..Q..|.Q..Q..Q.|..Q..Q..Q|Q...Q...Q|..Q.Q.Q..";
 
-    for (NSString *regexString in regexStrings) {
+    regexString = [regexString stringByReplacingOccurrencesOfString:@"Q" withString:currentPlayer];
+
+//    NSString *regexString1 = [NSString stringWithFormat:@"%@%@%@......", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString2 = [NSString stringWithFormat:@"...%@%@%@...", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString3 = [NSString stringWithFormat:@"......%@%@%@", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString4 = [NSString stringWithFormat:@"%@..%@..%@..", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString5 = [NSString stringWithFormat:@".%@..%@..%@.", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString6 = [NSString stringWithFormat:@"..%@..%@..%@", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString7 = [NSString stringWithFormat:@"%@...%@...%@", currentPlayer, currentPlayer, currentPlayer];
+//    NSString *regexString8 = [NSString stringWithFormat:@"..%@.%@.%@..", currentPlayer, currentPlayer, currentPlayer];
+//
+//    NSArray *regexStrings = [NSArray arrayWithObjects:regexString1, regexString2, regexString3, regexString4, regexString5, regexString6, regexString7, regexString8, nil];
+
+//    for (NSString *regexString in regexStrings) {
 
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:&error];
 
@@ -176,7 +183,7 @@
 
             winner = [NSString stringWithFormat:@"%@ wins!", currentPlayer];
         }
-    }
+//    }
 
     return winner;
 }
